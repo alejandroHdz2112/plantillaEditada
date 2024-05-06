@@ -1,0 +1,400 @@
+:root{
+    --secondaryColor: rgb(53, 133, 252);
+    --principalColor: rgb(255,255,255);
+    --terciaryColor: rgb(0,0,0);
+    --secondaryHover:rgb(18, 108, 244);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 2.5rem;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25rem;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: var(--principalColor);
+    background-color:var(--secondaryColor);
+}
+
+button:hover{
+    background-color: var(--secondaryHover);
+    transition: all 350ms;
+    cursor:pointer;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:var(--principalColor); }
+
+header{
+    background-color: rgb(245,245,245);
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: var(--secondaryColor);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--terciaryColor);
+    transition: all 300ms;
+}
+
+
+header a:hover{
+    color: var(--secondaryHover);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: var(--principalColor);
+}
+
+#hero button{
+    font-size: 1rem;
+}
+
+#somos-proya div.container{
+    text-align: justify;
+    padding: 150px 15px;   
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 30px 0px; 
+}
+.container h2 span{
+    color: var(--secondaryColor);
+}
+.img-container{
+    border-radius: 10px;
+}
+#nuestros-programas{
+    background-color: rgb(30,30,30);
+    color: var(--principalColor);
+    text-align: center;
+}
+
+#nuestros-programas .container{
+    padding: 150px 12px;
+}
+
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3em;
+}
+
+#nuestros-programas p{
+    display: none;
+    font-size: 1.3rem;
+}
+
+#nuestros-programas .carta{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/front-end.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/full-stack.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/python.jpg");
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+#caracteristicas ul{
+    padding: 10px 0;
+}
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: var(--principalColor);
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    
+    background-color: rgb(245,245,245);
+}
+
+footer p{
+    margin: auto 0;
+    padding: 12px;
+    color: var(--terciaryColor);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+ 
+    header a{
+        border-left: 3px solid var(--secondaryColor);
+    }
+    header a:first-child{
+        border-left: none;
+    }
+    #hero{
+        gap:4rem;
+        height: 100vh;
+    }
+    #hero h1{
+        font-size: 3em;
+    }
+    #hero button{
+        font-size: 1.5em;
+    }
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #somos-proya h2{
+        margin-top: 0px;
+    }
+
+    #somos-proya .img-container{
+        background-image: url("media/somos-proya.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas h2{
+        font-size: 4em;
+    }
+
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas .carta{
+        gap: 2rem;
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        transition: all 300ms;
+    }
+    #nuestros-programas .carta .info{
+        display: flex;
+        flex-direction: column;
+        gap: 2.3rem;
+    }
+
+    #nuestros-programas .carta:hover{
+        transform: translateY(-3%);
+    }
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/front-end-cropped.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/full-stack-cropped.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/python-cropped.jpg");
+
+    }
+
+    #caracteristicas{
+        background-image: url("media/background-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        width: 1200px;
+        text-align: initial;
+    } 
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 3em;
+    }
+
+    #final button{
+        font-size: 1.75rem;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px) {
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+}
